@@ -1,0 +1,20 @@
+{
+  "name": "nextjs-app",
+  "version": "1.0.0",
+  "description": "A modern web application using the Next.js framework",
+  "main": "server/server.py",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "typescript": "latest"
+  }
+}
