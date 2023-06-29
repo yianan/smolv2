@@ -1,0 +1,19 @@
+.homeContainer {
+  @apply bg-blue-200 min-h-screen flex flex-col items-center justify-center text-center;
+}
+
+.menu {
+  @apply w-1/4 h-full bg-blue-100 p-4;
+}
+
+.content {
+  @apply w-3/4 h-full bg-white p-4;
+}
+
+.title {
+  @apply text-4xl mb-4;
+}
+
+.description {
+  @apply text-xl;
+}

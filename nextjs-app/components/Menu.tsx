@@ -1,21 +1,20 @@
-import React from 'react';
-import Link from 'next/link';
-import styles from '../styles/global.css';
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import styles from '../styles/Home.module.css'
 
-const Menu: React.FC = () => {
+const Menu = () => {
+  const router = useRouter()
+
   return (
     <div className={styles.menu}>
       <Link href="/">
-        <a>Home</a>
-      </Link>
-      <Link href="/about">
-        <a>About</a>
+        <a className={router.pathname == "/" ? styles.active : ""}>Home</a>
       </Link>
       <Link href="/chatbot">
-        <a>Chatbot</a>
+        <a className={router.pathname == "/chatbot" ? styles.active : ""}>Chatbot</a>
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default Menu;
+export default Menu

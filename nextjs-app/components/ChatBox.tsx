@@ -8,12 +8,11 @@ const ChatBox: React.FC = () => {
   };
 
   return (
-    <div className="chatbox">
+    <div className="w-full h-full bg-light-blue-500">
       <textarea
-        id="chat-input"
+        className="w-full h-3/4 p-4"
         value={message}
         onChange={handleInputChange}
-        placeholder="Type your message here..."
       />
     </div>
   );

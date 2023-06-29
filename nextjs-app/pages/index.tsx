@@ -1,18 +1,39 @@
-import React from 'react';
-import Menu from '../components/Menu';
-import '../styles/global.css';
+import { NextPage } from 'next'
+import Head from 'next/head'
+import Menu from '../components/Menu'
+import styles from '../styles/Home.module.css'
 
-const Home = () => {
+const Home: NextPage = () => {
   return (
-    <div className="container">
-      <Menu />
-      <main>
-        <h1>Welcome to our Next.js App</h1>
-        <p>This is a modern web application built using the Next.js framework, TypeScript for type checking and improved developer experience, and a Python back-end with Flask and API routes.</p>
-        <p>It features server-side rendering for improved performance and a chatbot page with a text entry area, a new chat button, a send button and an abort button. The text area at the bottom occupies all available horizontal space except the button size.</p>
-      </main>
-    </div>
-  );
-};
+    <div className={styles.container}>
+      <Head>
+        <title>Home Page</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-export default Home;
+      <main className={styles.main}>
+        <Menu />
+        <h1 className={styles.title}>
+          Welcome to our Next.js App
+        </h1>
+
+        <p className={styles.description}>
+          This is a modern web application built using the Next.js framework.
+        </p>
+      </main>
+
+      <footer className={styles.footer}>
+        <a
+          href="https://nextjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{' '}
+          <img src="/nextjs.svg" alt="Next.js Logo" className={styles.logo} />
+        </a>
+      </footer>
+    </div>
+  )
+}
+
+export default Home
