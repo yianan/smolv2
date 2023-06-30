@@ -1,7 +1,7 @@
-import { NextPage } from 'next'
-import Head from 'next/head'
-import Menu from '../components/Menu'
-import styles from '../styles/Home.module.css'
+import { NextPage } from 'next';
+import Head from 'next/head';
+import { Menu } from '../components/Menu';
+import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
@@ -11,8 +11,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Menu />
+
       <main className={styles.main}>
-        <Menu />
         <h1 className={styles.title}>
           Welcome to our Next.js App
         </h1>
@@ -33,7 +34,7 @@ const Home: NextPage = () => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -1,0 +1,37 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #edf2f7;
+}
+
+.aboutContent {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #4a5568;
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: #f7fafc;
+  border-right: 1px solid #e2e8f0;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.menuItem {
+  display: block;
+  margin-bottom: 1rem;
+  color: #4a5568;
+  text-decoration: none;
+}
+
+.menuItem:hover {
+  color: #2d3748;
+}

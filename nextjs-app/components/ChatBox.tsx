@@ -1,19 +1,34 @@
 import React, { useState } from 'react';
 
-const ChatBox: React.FC = () => {
+const ChatBox = () => {
   const [message, setMessage] = useState('');
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setMessage(event.target.value);
+  const sendChat = () => {
+    // Send chat message logic here
+    console.log('SEND_CHAT', message);
+    setMessage('');
+  };
+
+  const abortChat = () => {
+    // Abort chat logic here
+    console.log('ABORT_CHAT');
+    setMessage('');
   };
 
   return (
-    <div className="w-full h-full bg-light-blue-500">
+    <div className="chatbox">
       <textarea
-        className="w-full h-3/4 p-4"
+        id="chat-input"
         value={message}
-        onChange={handleInputChange}
+        onChange={(e) => setMessage(e.target.value)}
+        placeholder="Type your message here..."
       />
+      <button id="chat-send-button" onClick={sendChat}>
+        Send
+      </button>
+      <button id="chat-abort-button" onClick={abortChat}>
+        Abort
+      </button>
     </div>
   );
 };
