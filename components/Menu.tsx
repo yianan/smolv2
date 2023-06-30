@@ -20,4 +20,4 @@ const Menu: React.FC = () => {
   );
 };
 
-export Menu;
+export default Menu;
