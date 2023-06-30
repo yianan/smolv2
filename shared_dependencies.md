@@ -1,46 +1,21 @@
 Shared Dependencies:
 
-1. **Exported Variables**: 
-   - `Menu` from `Menu.tsx`
-   - `ChatBox` from `ChatBox.tsx`
-   - `UploadZone` from `UploadZone.tsx`
-   - `FileList` from `FileList.tsx`
+1. **Next.js**: Used in "package.json", "next.config.js", "pages/index.tsx", "pages/home.tsx", "pages/chatbot.tsx". It's the main framework for the application.
 
-2. **Data Schemas**: 
-   - `File` schema in `models.py` for storing file metadata
+2. **React**: Used in all .tsx files. It's the library for building the user interface.
 
-3. **DOM Element IDs**: 
-   - `chat-input` for the chat input field in `ChatBox.tsx`
-   - `chat-send-button` for the send button in `ChatBox.tsx`
-   - `chat-abort-button` for the abort button in `ChatBox.tsx`
-   - `upload-button` for the upload button in `UploadZone.tsx`
-   - `file-list` for the list of uploaded files in `FileList.tsx`
-   - `delete-button` for the delete button in `FileList.tsx`
+3. **TypeScript**: Used in "package.json", "tsconfig.json", and all .tsx files. It's the language for type checking and improved developer experience.
 
-4. **Message Names**: 
-   - `SEND_CHAT` for sending a chat message
-   - `ABORT_CHAT` for aborting a chat
-   - `UPLOAD_FILE` for uploading a file
-   - `DELETE_FILE` for deleting a file
+4. **Flask**: Used in "server.py" and "api/routes.py". It's the back-end framework for Python.
 
-5. **Function Names**: 
-   - `sendChat` in `ChatBox.tsx` for sending a chat message
-   - `abortChat` in `ChatBox.tsx` for aborting a chat
-   - `uploadFile` in `UploadZone.tsx` for uploading a file
-   - `deleteFile` in `FileList.tsx` for deleting a file
-   - `getFiles` in `FileList.tsx` for getting the list of uploaded files
-   - `handleUpload` in `server/routes.py` for handling file upload
-   - `handleDelete` in `server/routes.py` for handling file deletion
+5. **DOM Elements IDs**: Used in all .tsx files. They are identifiers for HTML elements that JavaScript functions will use. Some of them could be "menu", "chatBox", "chatButton", "sendButton", "abortButton".
 
-6. **Shared Styles**: 
-   - `globals.css` for global styles
-   - `Home.module.css` for Home page styles
-   - `About.module.css` for About page styles
-   - `Chatbot.module.css` for Chatbot page styles
-   - `Document.module.css` for Document page styles
+6. **Exported Variables**: Used in all .tsx files. They are the components that are exported from one file and imported in another. Some of them could be "Menu", "ChatBox", "ChatButton", "SendButton", "AbortButton".
 
-7. **Shared Dependencies**: 
-   - Next.js for server-side rendering and routing
-   - TypeScript for type checking
-   - Python Flask for back-end and API routes
-   - Tailwind CSS for styling
+7. **Function Names**: Used in all .tsx and .py files. They are the names of the functions that perform specific tasks. Some of them could be "render", "handleClick", "handleSubmit", "abortChat".
+
+8. **Message Names**: Used in "pages/chatbot.tsx", "components/ChatBox.tsx", "server.py", "api/routes.py". They are the names of the messages exchanged between the client and the server. Some of them could be "newChat", "sendMessage", "abortChat".
+
+9. **Data Schemas**: Used in "server.py", "api/routes.py". They define the structure of the data exchanged between the client and the server. Some of them could be "ChatMessage", "AbortMessage".
+
+10. **Package Dependencies**: Used in "package.json". They are the names of the packages that the application depends on. Some of them could be "next", "react", "react-dom", "typescript".

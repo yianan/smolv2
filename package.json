@@ -1,0 +1,30 @@
+{
+  "name": "nextjs-chatbot",
+  "version": "1.0.0",
+  "description": "A modern web application using the Next.js framework with a Python Flask backend",
+  "main": "server.py",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "flask",
+    "chatbot"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/react": "latest",
+    "@types/node": "latest"
+  }
+}
