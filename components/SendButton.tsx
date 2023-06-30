@@ -6,7 +6,7 @@ interface SendButtonProps {
 
 const SendButton: React.FC<SendButtonProps> = ({ onClick }) => {
   return (
-    <button id="send-button" onClick={onClick}>
+    <button id="sendButton" onClick={onClick}>
       Send
     </button>
   );

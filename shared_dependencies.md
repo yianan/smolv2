@@ -1,23 +1,21 @@
 Shared Dependencies:
 
-1. **React**: All the .tsx files will share the React library as a dependency for creating components and managing the UI.
+1. **Next.js**: Used in "package.json", "next.config.js", "pages/index.tsx", "pages/home.tsx", "pages/chatbot.tsx". It's the main framework for the application.
 
-2. **Next.js**: All the .tsx files will use Next.js for server-side rendering and routing.
+2. **React**: Used in all .tsx files. It's the library for building the user interface.
 
-3. **TypeScript**: All .tsx files will use TypeScript for type checking and improved developer experience.
+3. **TypeScript**: Used in "package.json", "tsconfig.json", and all .tsx files. It's the language for type checking and improved developer experience.
 
-4. **Flask**: The Python files (app.py, routes.py) will use Flask for creating the back-end and API routes.
+4. **Flask**: Used in "server.py" and "api/routes.py". It's the back-end framework for Python.
 
-5. **CSS**: The global.css file will be shared across all .tsx files for styling.
+5. **DOM Elements IDs**: Used in all .tsx files. They are identifiers for HTML elements that JavaScript functions will use. Some of them could be "menu", "chatBox", "chatButton", "sendButton", "abortButton".
 
-6. **Exported Variables**: The components (Menu.tsx, ChatBox.tsx, ChatButton.tsx, AbortButton.tsx, SendButton.tsx) will likely export their respective React components to be used in the pages (index.tsx, home.tsx, chatbot.tsx).
+6. **Exported Variables**: Used in all .tsx files. They are the components that are exported from one file and imported in another. Some of them could be "Menu", "ChatBox", "ChatButton", "SendButton", "AbortButton".
 
-7. **DOM Element IDs**: The JavaScript functions will likely use DOM element IDs such as 'chat-input', 'chat-output', 'send-button', 'abort-button', 'new-chat-button' for the chatbot page.
+7. **Function Names**: Used in all .tsx and .py files. They are the names of the functions that perform specific tasks. Some of them could be "render", "handleClick", "handleSubmit", "abortChat".
 
-8. **Message Names**: In the chatbot page, there might be message names like 'user-message', 'bot-message' for differentiating between user and bot messages.
+8. **Message Names**: Used in "pages/chatbot.tsx", "components/ChatBox.tsx", "server.py", "api/routes.py". They are the names of the messages exchanged between the client and the server. Some of them could be "newChat", "sendMessage", "abortChat".
 
-9. **Function Names**: Functions like 'sendMessage', 'abortChat', 'startNewChat' might be shared across the chatbot-related components and pages.
+9. **Data Schemas**: Used in "server.py", "api/routes.py". They define the structure of the data exchanged between the client and the server. Some of them could be "ChatMessage", "AbortMessage".
 
-10. **Data Schemas**: If there's any data being passed around (like chat messages), there might be a shared schema for that data. For example, a 'message' object might have properties like 'sender', 'content', 'timestamp'. 
-
-11. **API Routes**: The Python back-end will define API routes that the front-end will need to call, these routes will be shared between the front-end and back-end code.
+10. **Package Dependencies**: Used in "package.json". They are the names of the packages that the application depends on. Some of them could be "next", "react", "react-dom", "typescript".
