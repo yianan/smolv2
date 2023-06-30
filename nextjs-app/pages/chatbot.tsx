@@ -1,33 +1,34 @@
-import { useState } from 'react';
-import { Menu } from '../components/Menu';
-import { ChatBox } from '../components/ChatBox';
-import styles from '../styles/Chatbot.module.css';
+import React, { useState } from 'react';
+import Menu from '../components/Menu';
+import ChatBox from '../components/ChatBox';
+import ChatButton from '../components/ChatButton';
+import AbortButton from '../components/AbortButton';
+import SendButton from '../components/SendButton';
+import '../styles/global.css';
 
 const Chatbot = () => {
-  const [chat, setChat] = useState('');
+  const [chat, setChat] = useState([]);
 
-  const handleSendChat = (message: string) => {
-    // TODO: Implement send chat functionality
-    console.log('SEND_CHAT', message);
-    setChat('');
+  const handleNewChat = () => {
+    setChat([]);
+  };
+
+  const handleSendMessage = (message) => {
+    setChat([...chat, { sender: 'user', content: message, timestamp: new Date() }]);
+    // TODO: Call API to get bot response and add to chat
   };
 
   const handleAbortChat = () => {
-    // TODO: Implement abort chat functionality
-    console.log('ABORT_CHAT');
-    setChat('');
+    setChat([]);
   };
 
   return (
-    <div className={styles.container}>
+    <div>
       <Menu />
-      <div className={styles.chatbot}>
-        <ChatBox
-          chat={chat}
-          onSendChat={handleSendChat}
-          onAbortChat={handleAbortChat}
-        />
-      </div>
+      <ChatBox chat={chat} />
+      <ChatButton onClick={handleNewChat} />
+      <SendButton onClick={handleSendMessage} />
+      <AbortButton onClick={handleAbortChat} />
     </div>
   );
 };

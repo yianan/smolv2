@@ -1,34 +1,26 @@
 import React, { useState } from 'react';
 
-const ChatBox = () => {
-  const [message, setMessage] = useState('');
+interface Message {
+  sender: string;
+  content: string;
+  timestamp: Date;
+}
 
-  const sendChat = () => {
-    // Send chat message logic here
-    console.log('SEND_CHAT', message);
-    setMessage('');
-  };
+const ChatBox: React.FC = () => {
+  const [messages, setMessages] = useState<Message[]>([]);
 
-  const abortChat = () => {
-    // Abort chat logic here
-    console.log('ABORT_CHAT');
-    setMessage('');
+  const addMessage = (message: Message) => {
+    setMessages([...messages, message]);
   };
 
   return (
-    <div className="chatbox">
-      <textarea
-        id="chat-input"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Type your message here..."
-      />
-      <button id="chat-send-button" onClick={sendChat}>
-        Send
-      </button>
-      <button id="chat-abort-button" onClick={abortChat}>
-        Abort
-      </button>
+    <div id="chat-output">
+      {messages.map((message, index) => (
+        <div key={index} className={message.sender}>
+          <p>{message.content}</p>
+          <span>{message.timestamp.toLocaleTimeString()}</span>
+        </div>
+      ))}
     </div>
   );
 };
